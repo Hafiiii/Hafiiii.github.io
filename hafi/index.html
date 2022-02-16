@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAFI</title>
+    <link rel="stylesheet" href="design.css">
+    <link rel="icon" href="images/icon.png">
+
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <!--<div class="nav-bar" id="navig">
+            <ul>
+                <li><a href="home-section">HOME</a></li>
+                <li><a href="about-section">ABOUT ME</a></li>
+                <li><a href="education-section">EDUCATION</a></li>
+                <li><a href="project-section">PROJECT</a></li>
+            </ul>
+    </div>-->
+
+    <div id="navig">
+        <a href="#home-section" class="nav-bar">HOME</a>
+        <a href="#project-section" class="nav-bar">PROJECTS</a>
+        <a href="#education-section" class="nav-bar">EDUCATION</a>
+        <a href="#about-section" class="nav-bar">ABOUT</a>
+    </div>
+
+
+    <div class="page-contents">
+            <!--Home Page-->
+            <section id="home-section" class="home-section">
+                <p>Hi I'm</p>
+                <h1>HAFI</h1>
+                <p>a software engineering student</p>
+            </section>
+
+            <!--About Me Page-->
+            <section id="about-section" class="about-section">
+                <div class="about" id="about-description">
+                    <h1><span>hey it's</span> ABOUT ME</h1>
+                    <h2>
+                        I'm a software engineering student based in Sarawak, Malaysia.
+                        I'm currently studying Software Engineering at University of Malaysia, Sarawak.
+                        Before getting into this degree, I was learning life sciences.
+                        And, now I am still learning to sharpen my skills in coding.
+                        The languages I've been learning are C, C#, HTML and CSS.
+                    </h2>
+                </div>
+
+                <div class="about" id="hafi">
+                    <img class="shape-img" src="images/shape.png">
+                    <img class="rocky-img" src="images/rocky.png">
+                </div>
+            </section>
+
+            <!--Education Page-->
+            <section id="education-section" class="education-section">
+            <div class="education" id="education-title">
+                <h1><span>my</span> EDUCATION</h1>
+                    <div class="unimas-row" id="logo">
+                        <img class="unimas-logo" src="images/unimas.png">
+                        <div class="education" id="university">
+                            <h2>University of Malaysia, Sarawak</h2>
+                            <h3>Bachelor of Software Engineering with Honours</h3>
+                            <h4>The Beginning : Oct 2021</h4>
+                            <h4>Expected Graduation : 2025</h4>
+                        </div>
+                    </div>
+                    <hr>    
+                    <div class="education" id="courses">
+                        <p>Semester 1</p>
+                            <ul>
+                                <li>Discrete Mathematics (TMF1814)</li>
+                                <li>Introduction of Programming (TMF1414)</li>
+                                <li>System Analyst and Design (TMF1014)</li>
+                                <li>Foundation of Entrepreneurship Inculturation (MPU3222)</li>
+                                <li>Softskill and Basic Volunteerism (PPD1041)</li>
+                            </ul>
+                    </div>
+            </div>
+            </section>
+
+            <!--Project Page-->
+            <section id="project-section" class="project-section">
+                <h1><span>the </span>CREATIONS</h1>
+
+                <!--Filter Buttons-->
+                <div class="button-section" id="button-section">
+                    <button class="filter-button active" onclick="filterSelection('all')">All</button>
+                    <button class="filter-button" onclick="filterSelection('c')">C</button>
+                    <button class="filter-button" onclick="filterSelection('c#')">C#</button>
+                    <button class="filter-button" onclick="filterSelection('web')">WEB</button>
+                </div>
+
+                <div class="courses" id="website">
+
+                    
+
+                </div>
+
+                
+            </section>
+
+
+
+
+    </div>
+
+</body>
+</html>

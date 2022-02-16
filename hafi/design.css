@@ -1,0 +1,377 @@
+@font-face {
+    font-family: "NTR";
+    font-weight: 200;
+    font-display: fallback;
+    src: url("/fonts/NTR-Regular.ttf") format("truetype");
+}
+
+body, html{
+    background-color: white;
+    color: black;
+	width: 100%;
+	height: 100%;
+	scroll-behavior: smooth;
+	font-family: "NTR";
+	font-style: normal;
+	margin: 0;
+    padding: 0;
+}
+
+
+
+/*Navigation bar*/
+
+
+#navig {
+	left: 0%;
+	right: 0%;
+	background-color: white;
+	position: fixed;
+	top: 0px;
+	display: block;
+	transition: top 0.4s;
+	box-shadow: 2px 2px 5px #aaaaaa;
+	z-index: 1;
+
+}
+
+.nav-bar {
+	color: #2a2d34;
+	float: right;
+	display: block;
+	text-align: center;
+	padding: 22px;
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.nav-bar:hover {
+	color: #2a2d34;
+	transition: 0.5s;
+}
+
+
+.nav-bar:hover:after {
+    transform: scaleX(1);
+}
+
+.nav-bar::after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #d3cbf5;  
+    transform: scaleX(0);  
+    transition: 350ms ease-in-out;
+    transform-origin: 0% 50%;
+}
+
+
+
+/*
+#navig {
+	left: 0%;
+	right: 0%;
+	background-color: white;
+	position: fixed;
+	top: -70px;
+	display: block;
+	transition: top 0.4s;
+	box-shadow: 2px 2px 5px #aaaaaa;
+	z-index: 1;
+
+}
+
+.nav-bar:first-child {
+	float: left;
+	font-weight: 500;
+}
+
+.nav-bar {
+	color: #2a2d34;
+	float: right;
+	display: block;
+	text-align: center;
+	padding: 22px;
+	text-decoration: none;
+	font-size: 17px;
+	font-weight: 500;
+}
+
+.nav-bar:hover {
+	color: #2a2d34;
+	transition: 0.5s;
+}
+
+
+.nav-bar:hover:after {
+    transform: scaleX(1);
+}
+
+.nav-bar::after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #d3cbf5;  
+    transform: scaleX(0);  
+    transition: 350ms ease-in-out;
+    transform-origin: 0% 50%;
+}
+*/
+
+
+/*
+#navig {
+    align-items: flex-end;
+    position: relative;
+    width: 100%;
+    height: 10%;
+}
+
+.nav-bar {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 2px 5px grey;
+}
+
+.nav-bar ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 2px 20px;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0px 5px;
+    text-align: center;
+}
+
+.nav-bar ul li a:hover {
+    color: darkcyan;
+}
+*/
+
+/*Home Page*/
+#home-section {
+    height: 300px;
+    margin: 200px;
+}
+
+.home-section > h1 {
+    font-family: serif;
+    font-size: 6rem;
+    color: black;
+    text-align: center;
+    line-height: 0;
+    text-shadow: 2px 2px darkcyan;
+}
+  
+.home-section > p {
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-align: center;
+    color: DarkCyan;
+}
+
+
+
+/**About Me Page**/
+#about-section {
+    font-family: "NTR";
+	min-height: 10vh ;
+    padding-left: 100px;
+    padding-bottom: 200px;
+    margin: auto;
+    width: 100%;
+}
+
+#about-description {
+    width: 50%;
+    height: 50%;
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+#about-description h1 {
+    font-size: 2rem;
+    font-weight: 1000;
+    color: rgb(30, 53, 53);
+    text-align: center;
+    text-shadow: 1px 1px rgb(1, 121, 121);
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+#about-description span {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-shadow: none;
+}
+
+#about-description h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 30px;
+    color: darkslategray;
+}
+
+#hafi {
+    /*flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;*/
+    width: 37%;
+    height: 28%;
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+}
+
+#hafi img {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 180%;
+    transform: translate(-50%, -50%);
+    transition: bottom 1s, left 1s;
+}
+#hafi:hover .shape {
+    bottom: 40px;
+}
+
+#hafi:hover .rocky {
+    left: 45%;
+}
+
+
+
+/*Education Page*/
+.education hr {
+    background-color: darkcyan;
+    border: none;
+    height: 1.5px;
+}
+
+#education-section {
+    background-color: rgba(0, 139, 139, 0.1);
+    color: black;
+    padding:50px;
+	padding-bottom: 80px;
+	min-height:100vh;
+    margin: auto;
+}
+
+.unimas-row {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#education-title {
+    padding-top: 0px;
+}
+
+.education-section h1 {
+    font-size: 2rem;
+    text-shadow: 1px 1px rgb(1, 121, 121);
+    text-align: center;
+    font-weight: 1000;
+    padding-bottom: 10px;
+}
+
+.education-section span {
+    color: black;
+    font-size: 1.2rem;
+    text-shadow: none;
+}
+
+.unimas-row img {
+    width: 10%;
+    padding: 20px;
+}
+
+#university {
+    align-items: flex-start;
+    font-weight: 100;
+}
+
+#university * {
+    margin: 20px;
+}
+
+#courses {
+    font-size: 1.2rem;
+    align-items: flex-start;
+    margin: 100px;
+}
+
+#courses * {
+    margin:auto;
+}
+
+.education p {
+    font-size: 1.6rem;
+}
+
+.education ul {
+    list-style-type: circle;
+}
+
+
+
+/*Project Page*/
+#project-section {
+	margin: auto;
+}
+
+
+#button-section {
+    align-items: center;
+    justify-content: center;
+  }
+
+.filter-button {
+	border: none;
+	outline: none;
+	padding: 10px 14px;
+	background-color: #f1f1f1e3;
+	cursor: pointer;
+	border-radius: 5px;
+	margin: 5px;
+	transition: 0.3s;
+}
+
+.filter-button:hover {
+	background-color: rgba(0, 139, 139, 0.600);
+}
+
+.filter-button.active {
+	background-color: rgba(0, 139, 139, 0.767);
+	color: white;
+}
+
+.project-section h1 {
+    font-size: 2rem;
+    text-shadow: 1px 1px rgb(1, 121, 121);
+    text-align: center;
+    font-weight: 1000;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, 0.025);
+}
+
+.project-section span {
+    color: black;
+    font-size: 1.1rem;
+    text-shadow: none;
+}
