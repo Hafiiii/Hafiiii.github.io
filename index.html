@@ -4,107 +4,165 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HAFI</title>
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="design2.css">
     <link rel="icon" href="images/icon.png">
 
 </head>
 
 <body>
     <!--Navigation bar-->
-    <!--<div class="nav-bar" id="navig">
-            <ul>
-                <li><a href="home-section">HOME</a></li>
-                <li><a href="about-section">ABOUT ME</a></li>
-                <li><a href="education-section">EDUCATION</a></li>
-                <li><a href="project-section">PROJECT</a></li>
-            </ul>
-    </div>-->
-
-    <div id="navig">
-        <a href="#home-section" class="nav-bar">HOME</a>
-        <a href="#project-section" class="nav-bar">PROJECTS</a>
-        <a href="#education-section" class="nav-bar">EDUCATION</a>
-        <a href="#about-section" class="nav-bar">ABOUT</a>
+    <div class="navbar">
+        <ul>
+            <li><a href="#home-section" class="active">//HAFI</a></li>
+            <li><a href="#about-section">//ABOUT</a></li>
+            <li><a href="#education-section">//EDUCATION</a></li>
+            <li><a href="#creation-section">//CREATIONS</a></li>
+        </ul>
     </div>
 
 
     <div class="page-contents">
+
+
             <!--Home Page-->
             <section id="home-section" class="home-section">
-                <p>Hi I'm</p>
-                <h1>HAFI</h1>
-                <p>a software engineering student</p>
+                <div class="container column" id="landing-text">
+                    <p class="subtitle">Hey I'm</p>
+                    <h1 class="title">HAFI</h1>
+                    <p class="subtitle">a software engineering student</p>
+                    <a href="mailto: hafizah.rmli@gmail.com" class="button">Email me</a>
+                </div>
             </section>
+            
 
             <!--About Me Page-->
             <section id="about-section" class="about-section">
                 <div class="about" id="about-description">
-                    <h1><span>hey it's</span> ABOUT ME</h1>
+                    <h1>// get to know me</h1>
                     <h2>
-                        I'm a software engineering student based in Sarawak, Malaysia.
-                        I'm currently studying Software Engineering at University of Malaysia, Sarawak.
-                        Before getting into this degree, I was learning life sciences.
-                        And, now I am still learning to sharpen my skills in coding.
-                        The languages I've been learning are C, C#, HTML and CSS.
+                        A <span>software engineering </span>student based in <span>Sarawak, Malaysia</span>.
+                        Currently pursuing Bachelor of Software Engineering in <span>University of Malaysia, Sarawak</span>.
+                        Still sharpening my coding skills.
+                        <p>Languages I have discovered:
+                        <ul>
+                            <li>HTML & CSS</li>
+                            <li>C</li>
+                            <li>C#</li>
+                            <li>C++</li>
+                        </ul>
+                        </p>
                     </h2>
                 </div>
 
                 <div class="about" id="hafi">
-                    <img class="shape-img" src="images/shape.png">
-                    <img class="rocky-img" src="images/rocky.png">
+                    <img class="hafi-img" src="images/hafi2.png">
                 </div>
+
             </section>
+
 
             <!--Education Page-->
             <section id="education-section" class="education-section">
-            <div class="education" id="education-title">
-                <h1><span>my</span> EDUCATION</h1>
-                    <div class="unimas-row" id="logo">
-                        <img class="unimas-logo" src="images/unimas.png">
-                        <div class="education" id="university">
-                            <h2>University of Malaysia, Sarawak</h2>
-                            <h3>Bachelor of Software Engineering with Honours</h3>
-                            <h4>The Beginning : Oct 2021</h4>
-                            <h4>Expected Graduation : 2025</h4>
+                <div class="education" id="education-description">
+                    <h1>// education</h1>
+                        <!--UITM-->
+                        <div class="university" id="uitm">
+                            <img class="logo" src="images/uitm.png">
+                            <div class="education" id="foundation">
+                                <h2>Universiti Teknologi MARA</h2>
+                                <h3>Foundation in Sciences</h3>
+                                <h4>The Beginning : Oct 2020</h4>
+                                <h4>The Graduation : Oct 2021</h4>
+                            </div>
                         </div>
-                    </div>
-                    <hr>    
-                    <div class="education" id="courses">
-                        <p>Semester 1</p>
-                            <ul>
-                                <li>Discrete Mathematics (TMF1814)</li>
-                                <li>Introduction of Programming (TMF1414)</li>
-                                <li>System Analyst and Design (TMF1014)</li>
-                                <li>Foundation of Entrepreneurship Inculturation (MPU3222)</li>
-                                <li>Softskill and Basic Volunteerism (PPD1041)</li>
-                            </ul>
-                    </div>
-            </div>
+
+                        <!--UNIMAS-->
+                        <div class="university" id="unimas">
+                            <img class="logo" src="images/unimas.png">
+                            <div class="education" id="degree">
+                                <h2>University of Malaysia, Sarawak</h2>
+                                <h3>Bachelor of Software Engineering with Honours</h3>
+                                <h4>The Beginning : Oct 2021</h4>
+                                <h4>Expected Graduation : Oct 2025</h4>
+                            </div>
+                        </div>
+    
+                        <!--<div class="education" id="courses-uitm">
+                            <p>Semester 1</p>
+                                <ul>
+                                    <li>Foundation Biology I (BIO091)</li>
+                                    <li>Foundation Chemistry I (CHM092)</li>
+                                    <li>Foundation Mathematics I (MAT093)</li>
+                                    <li>Foundation Physics I (PHY094)</li>
+                                    <li>Islamic World View (CTU085)</li>
+                                    <li>English For Foundation Studies I (ELC080)</li>
+                                </ul>
+
+                            <p>Semester 2</p>
+                                <ul>
+                                    <li>Foundation Biology II (BIO095)</li>
+                                    <li>Foundation Chemistry II (CHM096)</li>
+                                    <li>Foundation Mathematics II (MAT097)</li>
+                                    <li>Foundation Physics II (PHY098)</li>
+                                    <li>Islamic and Science (CTU087)</li>
+                                    <li>English For Foundation Studies II (ELC081)</li>
+                                </ul>
+                        </div>
+                        <hr>-->
+                        
+                        <!--<div class="education" id="courses-unimas">
+                            <p>Semester 1</p>
+                                <ul>
+                                    <li>Discrete Mathematics (TMF1814)</li>
+                                    <li>Introduction of Programming (TMF1414)</li>
+                                    <li>System Analyst and Design (TMF1014)</li>
+                                    <li>Foundation of Entrepreneurship Inculturation (MPU3222)</li>
+                                    <li>Softskill and Basic Volunteerism (PPD1041)</li>
+                                </ul>
+
+                            <p>Semester 2</p>
+                                <ul>
+                                    <li>Data Structure and Algorithms (TMF1434)</li>
+                                    <li>Computer Architecture (TMF1214)</li>
+                                    <li>Communication and Computer Network (TMF1254)</li>
+                                    <li>Automata Theory and Formal Language (TMF1883)</li>
+                                    <li>Credited Co-curricular (Community Service) (MPU3482)</li>
+                                </ul>
+                        </div>-->
+                </div>
             </section>
 
-            <!--Project Page-->
-            <section id="project-section" class="project-section">
-                <h1><span>the </span>CREATIONS</h1>
+            
+            <!--Creation Page-->
+            <section id="creation-section" class="creation-section">
+                <h1>// creations</h1>
 
                 <!--Filter Buttons-->
                 <div class="button-section" id="button-section">
                     <button class="filter-button active" onclick="filterSelection('all')">All</button>
                     <button class="filter-button" onclick="filterSelection('c')">C</button>
+                    <button class="filter-button" onclick="filterSelection('c++')">C++</button>
                     <button class="filter-button" onclick="filterSelection('c#')">C#</button>
                     <button class="filter-button" onclick="filterSelection('web')">WEB</button>
                 </div>
 
-                <div class="courses" id="website">
-
-                    
-
-                </div>
-
-                
             </section>
 
 
-
+            <!--Footer Section-->
+			<section class="footer-section" id="footer-section">
+				<div class="container row" id="contactme">
+                    <h1>// get in touch</h1>
+					<a href="https://www.linkedin.com/in/nur-hafizah-ramli-857762227/" target="_blank">linkedin</a>
+					<span>>></span>
+					<a href="mailto: hafizah.rmli@gmail.com" target="_blank">email</a>
+                    <span>>></span>
+					<a href="https://github.com/Hafiiii" target="_blank">github</a>
+				</div>
+				<div>
+					<h2 id="copyright">© 2021 created by hafizah</h2>
+				</div>
+			</section>
 
     </div>
 
