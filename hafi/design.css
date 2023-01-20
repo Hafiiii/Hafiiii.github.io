@@ -14,7 +14,7 @@ body, html {
 }
 
 
-/*Navigation bar*/
+/* Navigation bar */
 .navbar {
     position: fixed;
     overflow: hidden;
@@ -42,7 +42,7 @@ body, html {
 }
 
 
-/*Home Page*/
+/* Home Page */
 #home-section {
     height: 100vh;
     display: flex;
@@ -59,10 +59,10 @@ body, html {
 
 .title {
 	max-width: 100%;
-    margin-top: 20%;
-    margin-bottom: 20%;
+    margin-top: 12%;
+    margin-bottom: 12%;
     font-family: serif;
-    font-size: 7rem;
+    font-size: 6rem;
     line-height: 0;
     color:  #413f3d;
     text-align: center;
@@ -99,7 +99,7 @@ body, html {
 }
 
 
-/*About Me Page*/
+/* About Me Page */
 #about-section {
     width: 80%;
     margin: auto;
@@ -131,13 +131,20 @@ body, html {
     line-height: 35px;
 }
 
-#about-description h2 span {
+#about-description h2 a {
     color: #697184;
+    text-decoration: none;
+}
+
+#about-description h2 a {
+    color: #697184;
+    text-decoration: none;
     font-size: 24px;
     font-weight: 900;
 }
 
-#about-description h2 span:hover {
+
+#about-description h2 a:hover {
     color: white;
 }
 
@@ -153,6 +160,10 @@ body, html {
     color : white;
 }
 
+#about-description h2 li a {
+    color: white;
+}
+
 #hafi img {
     max-width: 80%;
     height: auto;
@@ -160,7 +171,8 @@ body, html {
     transition: 0.4s;
 }
 
-/*Education Page*/
+
+/* Education Page */
 #education-section {
     width: 80%;
     margin: auto;
@@ -198,11 +210,16 @@ body, html {
     font-weight: 200;
 }
 
-.education h3 {
+.education h3 a {
+    text-decoration: none;
     font-size: 24px;
     font-weight: 900;
     letter-spacing: 2px;
     color: #5b6274;
+}
+
+.education h3 a:hover {
+    color: white;
 }
 
 .education h4 {
@@ -213,7 +230,7 @@ body, html {
 }
 
 
-/*Creations Page*/
+/* Creations Page */
 #creation-section {
     width: 80%;
     margin: auto;
@@ -249,8 +266,14 @@ body, html {
 	color: rgba(255, 255, 255, 0.864);
 }
 
+#creation-section p {
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.739);
+    text-align: center;
+}
 
-/*Footer Section*/
+
+/* Footer Section */
 #footer-section {
     width: 50%;
     margin: auto;
