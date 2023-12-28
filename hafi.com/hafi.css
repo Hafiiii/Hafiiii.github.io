@@ -87,12 +87,7 @@ body, html {
 }
 
 
-
-
-.about-section {
-    height: 745px;
-}
-
+/* Title for each section */
 .page-title {
     text-align: center;
     padding-bottom: 50px;
@@ -111,6 +106,13 @@ body, html {
     font-weight: 700;
     letter-spacing: 2.40px;
     text-align: center;
+}
+
+
+
+/* About Section */
+.about-section {
+    height: 745px;
 }
 
 .about-image-content {
@@ -173,7 +175,7 @@ body, html {
 
 
 
-
+/* Education Section */
 .education-section {
     height: 745px;
 }
@@ -229,13 +231,12 @@ body, html {
 
 
 
-
+/* Creation Section */
 .creation-section {
     height: 745px;
     justify-content: center;
 	align-items: center;
 }
-
 
 .filter-button {
     display: inline-block;
@@ -264,13 +265,22 @@ body, html {
     grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-gap: 7px;
     padding-top: 70px;
+    
 }
 
 @media (max-width: 1080px) {
     .creation-row {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
-  }
+}
+
+.creation-column {
+    display: none;
+}
+
+.show {
+    display: block;
+}
 
 .creation-card {
     width: 300px;
@@ -303,4 +313,17 @@ body, html {
 .creation-card img {
     width: 26px;
     height: 26px;
+}
+
+
+/* Footer Section */
+#footer-section {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+#footer-section p {
+    font-size: 14px;
+    opacity: 70%;
 }
