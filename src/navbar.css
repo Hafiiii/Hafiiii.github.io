@@ -2,7 +2,7 @@
     font-family: "RobotoCondensed";
     font-weight: 400;
     font-display: fallback;
-    src: url("font/Roboto_Condensed/RobotoCondensed-Medium.ttf") format("truetype");
+    src: url("src/font/Roboto_Condensed/RobotoCondensed-Medium.ttf") format("truetype");
 }
 
 body {
