@@ -156,7 +156,7 @@ body, html {
     padding-left: 85px;
     position: relative;
     align-items: center;
-  }
+}
   
 .image-content img {
     max-width: 320px;
@@ -340,16 +340,312 @@ body, html {
 
 
 
+@font-face {
+    font-family: "RobotoCondensed";
+    font-weight: 400;
+    font-display: fallback;
+    src: url("font/RobotoCondensed-Medium.ttf") format("truetype");
+}
 
-@media (max-width: 1080px) {
+body, html {
+    background-color: #F8F9FA;
+    color: #212121;
+    font-family: "RobotoCondensed";
+    font-style: normal;
+    scroll-behavior: smooth;
+}
+
+@media (min-width:320px) {
+    .hello-column {
+        padding-top: 8.5rem;
+    }
+    .hafizah {
+        -webkit-text-fill-color: #F8F9FA;
+        cursor: default;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;   
+        h1 {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-size: 65px;
+            font-weight: 600;
+            letter-spacing: 7px;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+            -webkit-text-fill-color: #212121;
+        }   
+        .hafizah__filled {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            font-size: 65px;
+            font-weight: 600;
+            letter-spacing: 7px;
+            text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);
+            top: 0;
+            clip-path: polygon(0% 100%, 0% 99%, 100% 99%, 100% 100%);
+            transition: clip-path 600ms cubic-bezier(0.2, 0.1, 0.15, 1.32);
+        }   
+        &:hover {
+            .hafizah__filled {
+            clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+            }
+        }
+    }
+    .hey, .student {
+        font-size: 1.1rem;
+        text-align: center;
+        margin: auto;
+    }
+    .typewriter {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        padding-top: 1.3rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .typewriter img {
+        max-width: 14rem;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .typewriter img:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 500ms ease;
+    }
+    
+
+
+
+    .page-title {
+        text-align: center;
+    }  
+    .title-button {
+        cursor: default;
+        padding: 0.5rem 0.8rem;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+        text-align: center;
+        background-color: white;
+        border: none;
+        border-radius: 7rem;
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+        font-family: "RobotoCondensed";
+        margin-top: 7rem;
+        margin-bottom: 1.5rem;
+    }
+
+
+
+    .about-content {
+        text-align: justify;
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+    }
+    .skills-content-rows ul { 
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 10px));
+        margin-left: -2.5rem;
+    }   
+    .skills-content-rows li {
+        position: relative;
+        padding-left: 0.8rem;
+    }   
+    .skills-content-rows li::before {
+        content: "▹   ";
+        position: absolute;
+        left: 0;
+    }
+    .image-content {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        position: relative;
+        margin-top: 1.5rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image-content img {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        max-width: 14rem;
+        height: auto;
+        border-radius: 20rem 20rem 0 0;
+        border: 2px rgba(0, 0, 0, 0.5) solid;
+        transition: 1s ease;
+        margin-top: 1rem;
+    }
+    .image-content img:hover {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: 500ms ease;
+    }
+    .image-border {
+        width: 15.5rem;
+        height: 20.6rem;
+        margin:0 auto;
+        border: 2px rgba(0, 0, 0, 0.5) solid;
+        border-radius: 500px 500px 10px 10px;
+        background-color: #F8F9FA;
+    }
+
+
+    .education-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 2rem;
+    }
+    .education-card {
+        position: relative;
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+        padding: 1.2rem 1.2rem 0rem 1.2rem;
+        background-color: white;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        border-radius: 0.8rem;
+        text-align: center;
+        align-items: center;
+    }
+    .education-card:hover {
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+        transform: translateY(-3px);
+    }
+    .education-card img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 6rem;
+        height: auto;
+    }
+    .education-card h2 {
+        font-size: 1.1rem;
+    }
+    .education-card h3 {
+        font-size: 1rem;
+    }
+    .education-card p {
+        font-size: 0.8rem;
+        line-height: 0;
+    }
+
+
+    .button-container {
+        margin-bottom: 2.2rem;
+    }
+    .filter-button {
+        display: inline-block;
+        margin: 0.1rem;
+        padding: 0.5rem;
+        text-align: center;
+        text-decoration: none;
+        background-color: white;
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); 
+        cursor: pointer;
+    }   
+    .filter-button:hover, .filter-button.active {
+        background-color: #212121;
+        color: white;
+        box-shadow: none; 
+    }
+    .creation-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 2rem; 
+    }
+    .creation-column {
+        display: none;
+    }   
+    .show {
+        display: block;
+    }
+    .creation-card {
+        position: relative;
+        cursor: default;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 100%;
+        padding: 1.2rem 1.2rem 0rem 1.2rem;
+        background-color: white;
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+        border-radius: 0.8rem;
+        text-align: center;
+        align-items: center;
+    }
+    .creation-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+    }
+    .creation-card img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1.3rem;
+        height: auto;
+    }
+    .creation-card h2 {
+        font-size: 1.1rem;
+    }
+    .creation-card h3 {
+        font-size: 0.9rem;
+    }
+    .creation-card p {
+        font-size: 0.8rem;
+        line-height: 0;
+    }
+
+
+    #footer-section {
+        display: flex;
+        align-items: center;
+        padding-top: 7rem;
+    }    
+    .footer-credits {
+        text-align: center;
+        width: 100%;
+        font-size: 0.6rem;
+    }
+    .footer-credits img {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1.2rem;
+        height: auto;
+        padding: 0 0.5rem;
+    }
+}
+
+
+
+
+/* @media (max-width: 1080px) {
     .hello-column {
         padding-top: 75px;
     }
     .hey, .student {
         font-size: 25px;
-        letter-spacing: 3px;
-        padding-left: 20px;
-        
+        letter-spacing: 3px;  
     }
     .hafizah {
         h1 {
@@ -368,9 +664,6 @@ body, html {
         max-width: 400px;
         height: auto;
     }    
-}
-
-@media (max-width: 1080px) {
     .about-image-content {
         flex-direction: column;
         align-items: center;
@@ -381,38 +674,34 @@ body, html {
         max-width: 300px;
         height: auto;
         margin: 10px;
-    }       
-}
-
-@media (max-width: 1080px) {
-
+    }  
     .education-row {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     } 
     .education-card {
         height: 80%;
     }
-}
-
-@media (max-width: 1080px) {
     .creation-row {
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
-}
-
-@media (max-width: 1080px) {
     .hello-section, .about-section,
     .education-section, .creation-section {
         display: flex;
         flex-direction: column;
         height: auto;
-        margin: 100px 50px 0px 50px;
         width: 100%;
-        max-width: 300px;
+
         height: auto;
     }
     .footer-section {
         background-color: red;
     }
-
 }
+
+@media only screen and (max-width:320px) {
+    .about-content {
+        width: 50%;
+    }
+
+} */
+
