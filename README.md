@@ -1,4 +1,4 @@
-# hafiiii.github.io
+# Hafiiii.github.io
 <h1 align="center">Hafizah's Personal Website</h1>
 <br>
 <h3 align="center">-The Latest Version-</h3>
