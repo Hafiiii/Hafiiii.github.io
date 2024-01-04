@@ -11,257 +11,403 @@ body, html {
     font-family: "RobotoCondensed";
     font-style: normal;
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
-@media (min-width:320px) {
-    .hello-column {
-        padding-top: 8.5rem;
-    }
-    .hafizah {
-        -webkit-text-fill-color: #F8F9FA;
-        cursor: default;
+.hello-section, .about-section,
+.education-section, .creation-section {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+/* Hello Section */
+.hello-column {
+    padding: 104px 0;
+}
+.hafizah {
+    -webkit-text-fill-color: #F8F9FA;
+    cursor: default;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;   
+    h1 {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;   
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-size: 170px;
+        font-weight: 700;
+        letter-spacing: 50px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+        -webkit-text-fill-color: #212121;
+    }   
+    .hafizah__filled {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        font-size: 170px;
+        font-weight: 700;
+        letter-spacing: 50px;
+        text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);
+        top: 0;
+        clip-path: polygon(0% 100%, 0% 99%, 100% 99%, 100% 100%);
+        transition: clip-path 600ms cubic-bezier(0.2, 0.1, 0.15, 1.32);
+    }   
+    &:hover {
+        .hafizah__filled {
+        clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+        }
+    }
+}
+.hey, .student {
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-align: center;
+    margin: auto;
+}
+.typewriter {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    padding-top: 32px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.typewriter img {
+    max-width: 390px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 1s ease;
+}
+.typewriter img:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 500ms ease;
+}
+
+/* Title Button for Each Section */
+.page-title {
+    text-align: center;
+}  
+.title-button {
+    cursor: default;
+    padding: 20px;
+    font-size: 20px;
+    letter-spacing: 2.4px;
+    font-weight: 700;
+    text-align: center;
+    background-color: white;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+    font-family: "RobotoCondensed";
+    margin-top: 80px;
+    margin-bottom: 28px;
+}
+
+
+/* About Section */
+.about-image-content {
+    display: flex;
+    flex-direction: row;
+}
+.about-content {
+    text-align: justify;
+    line-height: 40px;
+    font-size: 20px;
+    margin-right: 40px;
+}
+.skills-content-rows ul { 
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 30px));
+    margin-left: -40px;
+}   
+.skills-content-rows li {
+    position: relative;
+    padding-left: 20px;
+    font-size: 18px;
+}   
+.skills-content-rows li::before {
+    content: "▹   ";
+    position: absolute;
+    left: 0;
+}
+.image-content {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    position: relative;
+    margin-top: 24px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-section img {   
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    max-width: 320px;
+    height: auto;
+    border-radius: 320px 320px 0 0;
+    border: 2px rgba(0, 0, 0, 0.5) solid;
+    transition: 1s ease;
+    margin-top: 16px;
+}
+.image-content img:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 500ms ease;
+}
+.image-border {
+    width: 354px;
+    height: 465px;
+    margin:0 auto;
+    border: 2px rgba(0, 0, 0, 0.5) solid;
+    border-radius: 500px 500px 10px 10px;
+    background-color: #F8F9FA;
+}
+
+
+/* Education Section */
+.education-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+.education-card {
+    position: relative;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding: 30px 20px 0px 20px;
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    text-align: center;
+    align-items: center;
+}
+.education-card:hover {
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+.education-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: auto;
+    height: 120px;
+}
+.education-card h2 {
+    font-size: 22px;
+    line-height: 22px;
+}
+.education-card h3 {
+    font-size: 18px;
+    line-height: 20px;
+}
+.education-card p {
+    font-size: 16px;
+    line-height: 0;
+}
+
+
+/* Creation Section */
+.button-container {
+    margin-bottom: 40px;
+}
+.filter-button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+    font-family: "RobotoCondensed";
+    font-size: 14px;
+}   
+.filter-button:hover, .filter-button.active {
+    background-color: #212121;
+    color: white;
+    box-shadow: none; 
+}
+.creation-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    grid-gap: 10px; 
+}
+.creation-column {
+    display: none;
+}   
+.show {
+    display: block;
+}
+.creation-card {
+    position: relative;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding: 20px 20px 0 20px;
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 13px;
+    text-align: center;
+    align-items: center;
+}
+.creation-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+.creation-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 21px;
+    height: auto;
+}
+.creation-card h2 {
+    font-size: 22px;
+}
+.creation-card h3 {
+    font-size: 16px;
+}
+.creation-card p {
+    font-size: 14px;
+    line-height: 0;
+}
+
+
+/* Footer Section */
+#footer-section {
+    display: flex;
+    align-items: center;
+    padding-top: 112px;
+}    
+.footer-credits {
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+}
+.footer-credits img {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 20px;
+    height: auto;
+    padding: 0 10px;
+}
+
+
+@media (max-width: 1025px) {
+    .hello-section, .about-section,
+    .education-section, .creation-section {
+        width: 825px;
+    }
+    .hello-column {
+        padding: 6.5rem 0;
+    }
+    .hafizah {  
         h1 {
-            position: relative;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            font-size: 65px;
+            font-size: 8.6rem;
             font-weight: 600;
-            letter-spacing: 7px;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-            -webkit-text-fill-color: #212121;
+            letter-spacing: 2rem;
         }   
         .hafizah__filled {
-            position: absolute;
-            margin: 0;
-            padding: 0;
-            font-size: 65px;
+            font-size: 8.6rem;
             font-weight: 600;
-            letter-spacing: 7px;
-            text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);
-            top: 0;
-            clip-path: polygon(0% 100%, 0% 99%, 100% 99%, 100% 100%);
-            transition: clip-path 600ms cubic-bezier(0.2, 0.1, 0.15, 1.32);
-        }   
-        &:hover {
-            .hafizah__filled {
-            clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
-            }
+            letter-spacing: 2rem;
         }
     }
     .hey, .student {
-        font-size: 1.1rem;
-        text-align: center;
-        margin: auto;
-    }
-    .typewriter {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        padding-top: 1.3rem;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 1.6rem;
+        letter-spacing: 0.6rem;
     }
     .typewriter img {
-        max-width: 14rem;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: 23rem;
     }
-    .typewriter img:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 500ms ease;
-    }
-    
-
-
-
-    .page-title {
-        text-align: center;
-    }  
     .title-button {
-        cursor: default;
-        padding: 0.5rem 0.8rem;
-        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        font-size: 1.2rem;
         letter-spacing: 0.1rem;
-        text-align: center;
-        background-color: white;
-        border: none;
         border-radius: 7rem;
-        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
-        font-family: "RobotoCondensed";
-        margin-top: 7rem;
-        margin-bottom: 1.5rem;
-    }
-
-
-
+        margin-top: 5rem;
+        margin-bottom: 1.7rem;
+    }   
     .about-content {
-        text-align: justify;
-        line-height: 1.5rem;
-        font-size: 0.9rem;
+        line-height: 2rem;
+        font-size: 1.1rem;
+        margin-right: 2rem;
     }
     .skills-content-rows ul { 
-        list-style-type: none;
-        display: grid;
-        grid-template-columns: repeat(3, minmax(100px, 10px));
-        margin-left: -2.5rem;
+        grid-template-columns: repeat(4, minmax(8rem, 10px));
     }   
     .skills-content-rows li {
-        position: relative;
         padding-left: 0.8rem;
-    }   
-    .skills-content-rows li::before {
-        content: "▹   ";
-        position: absolute;
-        left: 0;
-    }
-    .image-content {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
-        position: relative;
-        margin-top: 1.5rem;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        font-size: unset;
     }
     .image-content img {
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-        max-width: 14rem;
-        height: auto;
-        border-radius: 20rem 20rem 0 0;
-        border: 2px rgba(0, 0, 0, 0.5) solid;
-        transition: 1s ease;
-        margin-top: 1rem;
-    }
-    .image-content img:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-        transition: 500ms ease;
+        max-width: 15rem;
     }
     .image-border {
-        width: 15.5rem;
-        height: 20.6rem;
-        margin:0 auto;
-        border: 2px rgba(0, 0, 0, 0.5) solid;
-        border-radius: 500px 500px 10px 10px;
-        background-color: #F8F9FA;
+        width: 16.6rem;
+        height: 22.1rem;
     }
-
-
     .education-row {
-        display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 2rem;
     }
     .education-card {
-        position: relative;
-        cursor: default;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        height: 100%;
         padding: 1.2rem 1.2rem 0rem 1.2rem;
-        background-color: white;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        border-radius: 0.8rem;
-        text-align: center;
-        align-items: center;
-    }
-    .education-card:hover {
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-        transform: translateY(-3px);
     }
     .education-card img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 6rem;
-        height: auto;
+        height: 120px;
     }
     .education-card h2 {
         font-size: 1.1rem;
+        line-height: unset;
     }
     .education-card h3 {
         font-size: 1rem;
+        line-height: unset;
     }
     .education-card p {
         font-size: 0.8rem;
-        line-height: 0;
     }
-
-
     .button-container {
         margin-bottom: 2.2rem;
     }
     .filter-button {
-        display: inline-block;
         margin: 0.1rem;
         padding: 0.5rem;
-        text-align: center;
-        text-decoration: none;
-        background-color: white;
-        border: none;
-        border-radius: 2px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); 
-        cursor: pointer;
+        font-size: 0.9rem;
     }   
-    .filter-button:hover, .filter-button.active {
-        background-color: #212121;
-        color: white;
-        box-shadow: none; 
-    }
     .creation-row {
-        display: grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-gap: 2rem; 
     }
-    .creation-column {
-        display: none;
-    }   
-    .show {
-        display: block;
-    }
     .creation-card {
-        position: relative;
-        cursor: default;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        height: 100%;
         padding: 1.2rem 1.2rem 0rem 1.2rem;
-        background-color: white;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-        border-radius: 0.8rem;
-        text-align: center;
-        align-items: center;
-    }
-    .creation-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
     }
     .creation-card img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
         max-width: 1.3rem;
-        height: auto;
     }
     .creation-card h2 {
         font-size: 1.1rem;
@@ -271,25 +417,137 @@ body, html {
     }
     .creation-card p {
         font-size: 0.8rem;
-        line-height: 0;
-    }
-
-
-    #footer-section {
-        display: flex;
-        align-items: center;
-        padding-top: 7rem;
-    }    
+    } 
     .footer-credits {
-        text-align: center;
-        width: 100%;
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
     .footer-credits img {
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 1.2rem;
-        height: auto;
+        max-width: 1.3rem;
         padding: 0 0.5rem;
     }
 }
+
+@media (max-width: 961px) {
+    .hello-section, .about-section,
+    .education-section, .creation-section {
+        width: 661px;
+    }
+    .hafizah {  
+        h1, .hafizah__filled {
+            letter-spacing: 1rem;
+        }
+    }
+    .hey, .student {
+        font-size: 1.6rem;
+        letter-spacing: 0.6rem;
+    }
+    .typewriter img {
+        max-width: 23rem;
+    }
+    .about-image-content {
+        display: initial;
+        flex-direction: initial;
+    }
+    .about-content {
+        margin-right: unset;
+    }
+}
+
+@media (max-width:641px) {
+    .hello-section, .about-section,
+    .education-section, .creation-section {
+        width: 400px;
+    }
+    .hafizah { 
+        h1, .hafizah__filled {
+            font-size: 4.8rem;
+            letter-spacing: 0.7rem;
+        }   
+    }
+    .hey, .student {
+        font-size: 1.2rem;
+        letter-spacing: 0.4rem;
+    }
+    .typewriter img {
+        max-width: 16rem;
+    }
+
+    .title-button {
+        font-size: 0.9rem;
+    }
+
+    .about-content {
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+    }
+    .skills-content-rows ul { 
+        grid-template-columns: repeat(3, minmax(8rem, 10px));
+        margin-left: -1.8rem;
+    }
+    .image-content img {
+        max-width: 12.2rem;
+        margin-top: 13.5px;
+    }
+    .image-border {
+        width: 13.4rem;
+        height: 17.8rem;
+    }
+    .education-card img {
+        height: 6rem;
+    }
+    .education-card h2 {
+        font-size: 1.3rem;
+    }
+    .filter-button {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:481px) {
+    .hello-section, .about-section,
+    .education-section, .creation-section {
+        width: 320px;
+    }
+    .hafizah { 
+        h1, .hafizah__filled {
+            font-size: 3.7rem;
+            letter-spacing: 0.5rem;
+        }   
+    }
+    .hey, .student {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    .typewriter img {
+        max-width: 13rem;
+    }
+
+    .title-button {
+        font-size: 0.8rem;
+    }
+
+    .about-content {
+        line-height: 1.4rem;
+        font-size: 0.8rem;
+    }
+    .skills-content-rows ul { 
+        grid-template-columns: repeat(3, minmax(6rem, 10px));
+        margin-left: -2rem;
+    }
+    .image-content img {
+        max-width: 9.5rem;
+        margin-top: 11px;
+    }
+    .image-border {
+        width: 10.5rem;
+        height: 14rem;
+    }
+}
+
+@media (max-width:320px) {
+    .hello-section, .about-section,
+    .education-section, .creation-section {
+        width: 280px;
+    }
+}
+
