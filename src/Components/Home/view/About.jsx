@@ -29,11 +29,10 @@ export default function About() {
                     <Typography variant="body2" textAlign="justify">
                         Embarking on my software engineering journey from scratch,
                         inspired by a deep curiosity to create impactful things.
-                        My passion spans across modern technologies, particularly interested in
-                        web development, game development, cybersecurity, artificial intelligence,
-                        and all the exciting possibilities in between.
+                        Currently focused on front-end development, with an openness to exploring other exciting fields too.
                     </Typography>
                 </Stack>
+
                 {isMdUp &&
                     <Box>
                         <Stack
