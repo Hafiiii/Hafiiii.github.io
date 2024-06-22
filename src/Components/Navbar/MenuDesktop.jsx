@@ -1,20 +1,33 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { NavLink as RouterLink, useNavigate } from 'react-router-dom';
+import { NavLink as RouterLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 // @mui
-import { Masonry } from '@mui/lab';
-import { Box } from '@mui/material';
-import { Link, Paper, Typography, Stack } from '@mui/material';
+import { Link, Stack, Tooltip } from '@mui/material';
+// components
+import { _socials } from '../Footer/Footer';
+import Iconify from '../iconify/Iconify';
 
 // ----------------------------------------------------------------------
 
 export default function MegaMenuDesktopHorizon({ data, ...other }) {
   return (
-    <Stack direction="row" spacing={{ md: 1.5, lg: 2 }} {...other}>
-      <ParentItem title="Hello" path="/" />
-      <ParentItem title="About" categories={data} path="/" />
-      <ParentItem title="Education" categories={data} path="/" />
-      <ParentItem title="Creation" path="/" />
+    <Stack direction="column" spacing={2}>
+      <Stack direction="column" spacing={1} {...other}>
+        <ParentItem title="Hello" path="#hello" />
+        <ParentItem title="About" path="#about" />
+        <ParentItem title="Education" path="#education" />
+        <ParentItem title="Creation" path="#creation" />
+      </Stack>
+
+      <Stack direction="row" alignItems="center" spacing={1.3}>
+        {_socials.map((social) => (
+          <Tooltip title={social.shortURL} key={social.value} >
+            <Link component={RouterLink} onClick={() => { window.open(social.URL, '_blank') }}>
+              <Iconify icon={social.icon} sx={{ color: '#000', m: 0 }} />
+            </Link>
+          </Tooltip>
+        ))}
+      </Stack>
     </Stack>
   );
 }
@@ -33,32 +46,29 @@ function ParentItem({ title, path = '', icon, open, hasSub, isNew = false, ...ot
 
   return (
     <Link
-      component={RouterLink}
+      component={HashLink}
       to={path}
       underline="none"
       color="inherit"
-      variant="caption"
+      variant="body2"
+      smooth
       sx={{
-        fontSize: 13,
-        letterSpacing: 0.5,
+        fontSize: 16,
+        letterSpacing: 1,
         display: 'flex',
         cursor: 'pointer',
         alignItems: 'center',
         textTransform: 'uppercase',
-        height: 64,
-        lineHeight: '64px',
         transition: (theme) => theme.transitions.create('all'),
         '&:hover': {
           activeStyle,
           ...(open && activeStyle),
-          color: '#9f694f',
+          color: 'text.secondary',
         },
         position: 'relative',
       }}
       {...other}
     >
-      {icon && <Stack sx={{ width: 20, height: 20, mr: 1 }}>{icon}</Stack>}
-
       {title}
     </Link>
   );

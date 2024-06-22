@@ -6,7 +6,6 @@ import { Button, Divider, Drawer, IconButton, List, Link, ListItemText, ListItem
 // config
 import { NAV } from '../../config-global';
 // components
-import { LogoWord } from '../logo/Logo';
 import Iconify from '../iconify/Iconify';
 import Scrollbar from '../scrollbar/Scrollbar';
 
@@ -37,7 +36,6 @@ export default function MegaMenuMobile({ data, open, action, onOpen, onClose }) 
             >
                 <Scrollbar>
                     <Stack direction='row' sx={{ justifyContent: 'space-evenly' }} >
-                        <LogoWord sx={{ my: 8 }} />
                     </Stack>
 
                     <Link component={RouterLink} color="inherit" underline="none" to="/" >

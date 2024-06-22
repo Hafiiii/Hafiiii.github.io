@@ -53,7 +53,7 @@ const Image = forwardRef(
                 ref={ref}
                 component="span"
                 sx={{
-                    lineHeight: 1,
+                    lineHeight: 0,
                     display: 'block',
                     overflow: 'hidden',
                     position: 'relative',

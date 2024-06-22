@@ -101,20 +101,7 @@ export function remToPx(value) {
       lineHeight: 1.5,
       fontSize: pxToRem(12),
       fontFamily: primaryFont,
-    },
-    overline: {
-      fontWeight: 700,
-      lineHeight: 1.5,
-      fontSize: pxToRem(12),
-      fontFamily: primaryFont,
-      textTransform: 'uppercase',
-    },
-    button: {
-      fontWeight: 600,
-      lineHeight: 24 / 14,
-      fontSize: pxToRem(14),
-      textTransform: 'capitalize',
-    },    
+    },   
   };
   
   export default typography;
