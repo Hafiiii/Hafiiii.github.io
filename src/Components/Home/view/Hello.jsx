@@ -8,14 +8,13 @@ import Typewriter from '../../../assets/typewriter.png';
 const HafizahContainer = styled('div')({
     position: 'relative',
     display: 'inline-block',
+
     '& h1': {
         position: 'relative',
         margin: 0,
         padding: 0,
-        fontSize: 150,
         fontWeight: 700,
         overflow: 'hidden',
-        letterSpacing: 50,
         textShadow: '0px 4px 4px rgba(0, 0, 0, 0.5)',
         color: '#212121',
         zIndex: 1,
@@ -26,9 +25,7 @@ const HafizahContainer = styled('div')({
         margin: 0,
         padding: 0,
         top: 0,
-        fontSize: 150,
         fontWeight: 700,
-        letterSpacing: 50,
         textShadow: '0px 4px 7px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25)',
         clipPath: 'polygon(0% 100%, 0% 99%, 100% 99%, 100% 100%)',
         transition: 'clip-path 0.6s cubic-bezier(0.2, 0.1, 0.15, 1.32)',
@@ -43,16 +40,16 @@ const HafizahContainer = styled('div')({
 export default function Hello() {
     return (
         <>
-            <Stack direction="column" alignItems="center" justifyContent="center" spacing={10} height="100vh">
-                <Stack direction="column" alignItems="center" justifyContent="center" spacing={0}>
-                    <Typography variant='body2' lineHeight={0} fontSize={28} letterSpacing={7}>Hey, I'm</Typography>
+            <Stack direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 4, md: 10 }} height="100vh">
+                <Stack direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 1, md: 0 }}>
+                    <Typography variant='body2' lineHeight={0} fontSize={{ xs: 18, md: 28 }} letterSpacing={{ xs: 2, md: 7 }}>Hey, I'm</Typography>
 
                     <HafizahContainer>
-                        <Typography variant="h1">HAFIZAH</Typography>
-                        <Typography variant="h1" className="hafizah__filled">HAFIZAH</Typography>
+                        <Typography variant="h1" fontSize={{ xs: 60, md: 150 }} letterSpacing={{ xs: 6, md: 50 }}>HAFIZAH</Typography>
+                        <Typography variant="h1" fontSize={{ xs: 60, md: 150 }} letterSpacing={{ xs: 6, md: 50 }} className="hafizah__filled">HAFIZAH</Typography>
                     </HafizahContainer>
 
-                    <Typography variant='body2' lineHeight={0} fontSize={28} letterSpacing={7}>software engineering student</Typography>
+                    <Typography variant='body2' lineHeight={0} fontSize={{ xs: 18, md: 28 }} letterSpacing={{ xs: 2, md: 7 }}>software engineering student</Typography>
                 </Stack>
 
                 <Image
@@ -60,7 +57,7 @@ export default function Hello() {
                     alt="typewriter"
                     sx={{
                         width: 'auto',
-                        height: '30%',
+                        height: { xs: '20%', md: '35%' },
                         objectFit: 'cover',
                         objectPosition: 'center',
                         '&:hover': {

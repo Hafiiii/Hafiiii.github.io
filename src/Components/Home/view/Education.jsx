@@ -11,7 +11,6 @@ export default function Education() {
             <TitleButton>@ EDUCATION</TitleButton>
 
             <Box
-                mx={10}
                 rowGap={2}
                 columnGap={2}
                 display="grid"

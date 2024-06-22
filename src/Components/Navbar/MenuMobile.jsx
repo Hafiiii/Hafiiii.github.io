@@ -8,6 +8,8 @@ import { NAV } from '../../config-global';
 // components
 import Iconify from '../iconify/Iconify';
 import Scrollbar from '../scrollbar/Scrollbar';
+import { HashLink } from 'react-router-hash-link';
+import { _socials } from '../Footer/Footer';
 
 // ----------------------------------------------------------------------
 
@@ -21,50 +23,22 @@ export default function MegaMenuMobile({ data, open, action, onOpen, onClose }) 
     }, [pathname]);
 
     return (
-        <>
-            {action || (
-                <Button variant="contained" onClick={onOpen} startIcon={<Iconify icon="carbon:menu" />}>
-                    Menu
-                </Button>
-            )}
+        <Stack direction="row" justifyContent="space-between" spacing={2} px={1.5}>
+            <Stack direction="row" spacing={1}>
+                <ParentItem title="Hello" path="#hello" />
+                <ParentItem title="About" path="#about" />
+                <ParentItem title="Education" path="#education" />
+                <ParentItem title="Creation" path="#creation" />
+            </Stack>
 
-            <Drawer
-                open={open}
-                onClose={onClose}
-                ModalProps={{ keepMounted: true }}
-                PaperProps={{ sx: { pb: 5, width: NAV.W_BASE } }}
-            >
-                <Scrollbar>
-                    <Stack direction='row' sx={{ justifyContent: 'space-evenly' }} >
-                    </Stack>
-
-                    <Link component={RouterLink} color="inherit" underline="none" to="/" >
-                        <ParentItem title="Home" />
+            <Stack direction="row" alignItems="center" spacing={1}>
+                {_socials.map((social) => (
+                    <Link key={social.value} component={RouterLink} onClick={() => { window.open(social.URL, '_blank') }}>
+                        <Iconify icon={social.icon} width={15} sx={{ color: '#000', m: 0 }} />
                     </Link>
-
-                    <Link component={RouterLink} color="inherit" underline="none" to="/Men" >
-                        <SubMenu title="Men" categories={data} />
-                    </Link>
-
-                    <Link component={RouterLink} color="inherit" underline="none" to="/Women" >
-                        <SubMenu title="Women" categories={data} />
-                    </Link>
-
-                    <Link component={RouterLink} color="inherit" underline="none" to="/Collection" >
-                        <ParentItem title="Collection" />
-                    </Link>
-
-                    <Link component={RouterLink} color="inherit" underline="none" to="/NewIn" >
-                        <ParentItem title="New&nbsp;In" />
-                    </Link>
-
-                    <Link component={RouterLink} color="inherit" underline="none" to="/About">
-                        <ParentItem title="About" />
-                    </Link>
-
-                </Scrollbar>
-            </Drawer>
-        </>
+                ))}
+            </Stack>
+        </Stack>
     );
 }
 
@@ -78,137 +52,48 @@ MegaMenuMobile.propTypes = {
 
 // ----------------------------------------------------------------------
 
-const ParentItem = forwardRef(({ icon, title, hasSub, ...other }, ref) => (
-    <ListItemButton ref={ref} sx={{ height: 44 }} {...other}>
-        <ListItemIcon
-            sx={{
-                minWidth: 0,
-                width: 24,
-                height: 24,
-            }}
-        >
-            {icon}
-        </ListItemIcon>
+function ParentItem({ title, path = '', icon, open, hasSub, isNew = false, ...other }) {
+    const activeStyle = {
+        color: 'primary.dark',
+    };
 
-        <ListItemText primaryTypographyProps={{ typography: 'body2', fontFamily: 'Playfair Display', textTransform: 'uppercase' }}>{title}</ListItemText>
-        {hasSub && <Iconify icon="carbon:chevron-right" width={16} sx={{ m: 0 }} />}
-    </ListItemButton>
-));
+    return (
+        <Link
+            component={HashLink}
+            to={path}
+            underline="none"
+            color="inherit"
+            variant="body2"
+            smooth
+            sx={{
+                fontSize: 11,
+                letterSpacing: 0.5,
+                display: 'flex',
+                cursor: 'pointer',
+                height: 55,
+                lineHeight: '55px',
+                alignItems: 'center',
+                textTransform: 'uppercase',
+                transition: (theme) => theme.transitions.create('all'),
+                '&:hover': {
+                    activeStyle,
+                    ...(open && activeStyle),
+                    color: 'text.secondary',
+                },
+                position: 'relative',
+            }}
+            {...other}
+        >
+            {title}
+        </Link>
+    );
+}
 
 ParentItem.propTypes = {
     hasSub: PropTypes.bool,
     icon: PropTypes.node,
+    open: PropTypes.bool,
+    path: PropTypes.string,
     title: PropTypes.string,
-};
-
-// ----------------------------------------------------------------------
-
-function SubMenu({ parent, pathname, categories, title }) {
-    const navigate = useNavigate();
-    const [openDrawer, setOpenDrawer] = useState(false);
-
-    useEffect(() => {
-        if (openDrawer) {
-            handleCloseDrawer();
-        }
-    }, [pathname]);
-
-    const handleOpenDrawer = () => {
-        setOpenDrawer(true);
-    };
-
-    const handleCloseDrawer = () => {
-        setOpenDrawer(false);
-    };
-
-    return (
-        <>
-            <ParentItem title={title} onClick={handleOpenDrawer} hasSub />
-
-            <Drawer
-                open={openDrawer}
-                onClose={handleCloseDrawer}
-                BackdropProps={{ invisible: true }}
-                ModalProps={{ keepMounted: true }}
-            >
-                <Stack direction="row" alignItems="center" px={1} py={1.5}>
-                    <IconButton onClick={handleCloseDrawer}>
-                        <Iconify icon="carbon:chevron-left" width={16} />
-                    </IconButton>
-
-                    <Typography variant="subtitle1" sx={{ ml: 1, textTransform: 'uppercase' }}>
-                        {title}
-                    </Typography>
-                </Stack>
-                <Divider />
-
-                <Scrollbar>
-                    <Stack spacing={5} py={3}>
-                        {categories.map((list) => {
-                            const { ProductCategory, children } = list;
-                            return (
-                                <List key={ProductCategory} disablePadding>
-                                    <Typography
-                                        component={RouterLink}
-                                        // to={paths.eCommerce.products("Category", list.ProductCategoryID)}
-                                        variant="overline"
-                                        sx={{
-                                            px: 1.5,
-                                            mb: 1,
-                                            textDecoration: 'none',
-                                            fontWeight: 600
-                                        }}
-                                        noWrap
-                                    >
-                                        {ProductCategory}
-                                    </Typography>
-
-                                    {children.map((link) => (
-                                        <Link
-                                            key={link.ProductCategoryID}
-                                            component={RouterLink}
-                                            //   to={paths.eCommerce.products("Category", link.ProductCategoryID)}
-                                            color="inherit"
-                                            underline="none"
-                                        >
-                                            <ListItemButton sx={{ px: 1.5 }}>
-                                                <ListItemIcon
-                                                    sx={{
-                                                        minWidth: 0,
-                                                        width: 24,
-                                                        height: 24,
-                                                        display: 'flex',
-                                                        alignItems: 'center',
-                                                        justifyContent: 'center',
-                                                    }}
-                                                >
-                                                </ListItemIcon>
-
-                                                <ListItemText
-                                                    primary={link.ProductCategory}
-                                                    primaryTypographyProps={{ noWrap: true, typography: 'body2' }}
-                                                />
-                                            </ListItemButton>
-                                        </Link>
-                                    ))}
-                                </List>
-                            );
-                        })}
-                    </Stack>
-                </Scrollbar>
-            </Drawer>
-        </>
-    );
-}
-
-SubMenu.propTypes = {
-    parent: PropTypes.shape({
-        children: PropTypes.array,
-        icon: PropTypes.node,
-        path: PropTypes.string,
-        title: PropTypes.string,
-    }),
-    pathname: PropTypes.string,
-    categories: PropTypes.array,
-    title: PropTypes.string,
+    isNew: PropTypes.bool,
 };

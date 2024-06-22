@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 // @mui
 import { Box, Container, Fade } from '@mui/material';
+import useResponsive from '../hooks/useResponsive';
 //sections
 import Hello from './view/Hello';
 import About from './view/About';
@@ -8,6 +9,8 @@ import Education from './view/Education';
 import Creation from './view/Creation';
 
 export default function Home() {
+  const isMdUp = useResponsive('up', 'md');
+
   return (
     <>
       <Helmet>
@@ -16,8 +19,25 @@ export default function Home() {
 
       <Fade in={true}>
         <main className='min-h-screen mx-9' >
-          <Container>
-            <Box mx={6}>
+          {isMdUp ? (
+            <Container>
+              <Box mx={10}>
+                <section id="hello">
+                  <Hello />
+                </section>
+                <section id="about">
+                  <About />
+                </section>
+                <section id="education">
+                  <Education />
+                </section>
+                <section id="creation">
+                  <Creation />
+                </section>
+              </Box>
+            </Container>
+          ) : (
+            <>
               <section id="hello">
                 <Hello />
               </section>
@@ -30,8 +50,8 @@ export default function Home() {
               <section id="creation">
                 <Creation />
               </section>
-            </Box>
-          </Container>
+            </>
+          )}
         </main>
       </Fade>
     </>

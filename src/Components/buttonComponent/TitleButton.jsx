@@ -1,7 +1,7 @@
 // @mui
 import { Button, Stack } from '@mui/material';
 
-export default function HeroHome({children}) {
+export default function HeroHome({ children }) {
     return (
         <Stack alignItems="center">
             <Button
@@ -15,8 +15,8 @@ export default function HeroHome({children}) {
                     py: 1.5,
                     borderRadius: 50,
                     cursor: 'default',
-                    mb: 8,
-                    mt: 20,
+                    mb: { xs: 5, md: 8 },
+                    mt: { xs: 10, md: 20 },
                     '&:hover': {
                         backgroundColor: '#fff',
                     }
