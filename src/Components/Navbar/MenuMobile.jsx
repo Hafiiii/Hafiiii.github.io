@@ -1,14 +1,11 @@
 import PropTypes from 'prop-types';
-import { useState, useEffect, forwardRef } from 'react';
-import { NavLink as RouterLink, useNavigate, useLocation } from 'react-router-dom';
+import { useEffect, } from 'react';
+import { NavLink as RouterLink, useLocation } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 // @mui
-import { Button, Divider, Drawer, IconButton, List, Link, ListItemText, ListItemIcon, ListItemButton, Stack, Typography } from '@mui/material';
-// config
-import { NAV } from '../../config-global';
+import { Link, Stack } from '@mui/material';
 // components
 import Iconify from '../iconify/Iconify';
-import Scrollbar from '../scrollbar/Scrollbar';
-import { HashLink } from 'react-router-hash-link';
 import { _socials } from '../Footer/Footer';
 
 // ----------------------------------------------------------------------

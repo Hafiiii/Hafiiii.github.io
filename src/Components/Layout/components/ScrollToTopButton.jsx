@@ -36,19 +36,21 @@ export default function ScrollToTopButton() {
             size="small"
             aria-label="scroll back to top"
             sx={{
-                border: '1.5px solid rgb(159, 105, 79)',
-                backgroundColor: '#fff',
-                boxShadow: '0 4px 10px 0 rgb(0, 0, 0, 0.3)',
+                backgroundColor: '#212121',
+                boxShadow: '0 6px 8px 0 rgb(0, 0, 0, 0.3)',
                 position: 'fixed',
                 bottom: 16,
                 right: 16,
                 zIndex: (theme) => theme.zIndex.speedDial,
-                color: 'rgb(159, 105, 79)',
-                opacity: 0.8,
+                color: '#fff',
+                '&:hover': {
+                    backgroundColor: '#212121',
+                    color: '#fff',
+                }
             }}
             onClick={handleClick}
         >
-            <Iconify icon="eva:arrow-upward-outline" width={20} height={20} sx={{ m: 0 }} />
+            <Iconify icon="fluent:chevron-up-12-filled" width={20} height={20} sx={{ m: 0 }} />
         </Fab>
     );
 }

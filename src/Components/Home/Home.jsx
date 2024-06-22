@@ -7,6 +7,8 @@ import Hello from './view/Hello';
 import About from './view/About';
 import Education from './view/Education';
 import Creation from './view/Creation';
+// components
+import ScrollToTopButton from '../Layout/components/ScrollToTopButton';
 
 export default function Home() {
   const isMdUp = useResponsive('up', 'md');
@@ -19,6 +21,8 @@ export default function Home() {
 
       <Fade in={true}>
         <main className='min-h-screen mx-9' >
+          <ScrollToTopButton />
+
           {isMdUp ? (
             <Container>
               <Box mx={10}>
