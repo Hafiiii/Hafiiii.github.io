@@ -1,7 +1,5 @@
 // @mui
-import { Box, Stack, Typography } from '@mui/material';
-// hooks
-import useResponsive from '../../hooks/useResponsive';
+import { Box, Stack, Typography, useMediaQuery } from '@mui/material';
 // components
 import Image from '../../image/Image';
 import hafizah from '../../../assets/hafizah.jpeg';
@@ -9,7 +7,7 @@ import TitleButton from '../../buttonComponent/TitleButton';
 import Iconify from '../../iconify/Iconify';
 
 export default function About() {
-    const isMdUp = useResponsive('up', 'md');
+    const isMdUp = useMediaQuery('(max-width: 899px)');
 
     return (
         <>

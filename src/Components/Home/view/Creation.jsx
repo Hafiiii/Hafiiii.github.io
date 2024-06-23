@@ -26,6 +26,7 @@ export default function SignatureDishes() {
     ]);
 
     const [viewMode, setViewMode] = useState('carousel');
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     const carouselSettings = {
         dots: false,

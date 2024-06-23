@@ -6,16 +6,20 @@
   "homepage": "http://Hafiiii.github.io/Hafiiii.github.io",
   "scripts": {
     "dev": "vite",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "start": "react-scripts start",
-    "build": "react-scripts build && cp -r public/* docs/",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -b master -d build"
   },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "@iconify/react": "^4.1.1",
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.16",
@@ -24,15 +28,16 @@
     "iconify": "^1.4.0",
     "notistack": "^3.0.1",
     "numeral": "^2.0.6",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet-async": "^2.0.4",
     "react-icons": "^5.0.1",
     "react-lazy-load-image-component": "^1.6.0",
     "react-router-dom": "^6.22.3",
     "react-router-hash-link": "^2.4.3",
+    "react-hook-form": "^7.51.2",
     "react-slick": "^0.30.2",
+    "rsuite": "^5.64.2",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
@@ -43,11 +48,13 @@
     "eslint": "^8.38.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
+    "gh-pages": "^3.1.0",
+    "html-webpack-plugin": "^5.6.0",
     "postcss": "^8.4.24",
+    "react-refresh": "^0.14.2",
+    "react-scripts": "^5.0.1",
     "tailwindcss": "^3.3.2",
-    "vite": "^5.2.11",
-    "gh-pages": "^3.1.0"
+    "vite": "^5.2.11"
   },
   "description": "HAFIZAH website",
   "main": "postcss.config.js",

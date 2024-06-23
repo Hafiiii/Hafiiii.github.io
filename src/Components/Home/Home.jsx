@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 // @mui
-import { Box, Container, Fade } from '@mui/material';
-import useResponsive from '../hooks/useResponsive';
+import { Box, Container, Fade, useMediaQuery } from '@mui/material';
 //sections
 import Hello from './view/Hello';
 import About from './view/About';
@@ -11,7 +10,7 @@ import Creation from './view/Creation';
 import ScrollToTopButton from '../Layout/components/ScrollToTopButton';
 
 export default function Home() {
-  const isMdUp = useResponsive('up', 'md');
+  const isMdUp = useMediaQuery('(max-width: 899px)');
 
   return (
     <>
