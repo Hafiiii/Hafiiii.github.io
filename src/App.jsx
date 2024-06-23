@@ -1,10 +1,6 @@
-// scroll bar
-import 'simplebar-react/dist/simplebar.min.css';
 // slick-carousel
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// react-inner-image-zoom
-import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
