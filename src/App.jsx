@@ -2,7 +2,7 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import { Route, BrowserRouter, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 // @mui
 import { ThemeProvider, styled } from "@mui/material/styles";
@@ -35,7 +35,6 @@ const StyledMaterialDesignContent = styled(MaterialDesignContent)(() => ({
 export default function App() {
   return (
     <HelmetProvider>
-      <BrowserRouter basename="/">
         <ThemeProvider theme={theme}>
           <SnackbarProvider
             autoHideDuration={1500}
@@ -53,7 +52,6 @@ export default function App() {
             </Routes>
           </SnackbarProvider>
         </ThemeProvider>
-      </BrowserRouter>
     </HelmetProvider>
   )
 }
