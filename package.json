@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "http://Hafiiii.github.io/Hafiiii.github.io",
+  "homepage": "https://hafiiii.github.io/",
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
@@ -12,7 +12,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
