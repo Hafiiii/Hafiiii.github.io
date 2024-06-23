@@ -1,7 +1,9 @@
 import { useState } from 'react';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Button, useMediaQuery } from '@mui/material';
+import { Button } from '@mui/material';
+//hooks
+import useResponsive from '../hooks/useResponsive';
 // sections
 import MegaMenuDesktopHorizon from './MenuDesktop';
 import MegaMenuMobile from './MenuMobile';
@@ -35,7 +37,7 @@ const MobileStyledRoot = styled('div')(() => ({
 // ----------------------------------------------------------------------
 
 export default function Navbar() {
-    const isMdUp = useMediaQuery('(max-width: 899px)');
+    const isMdUp = useResponsive('up', 'md');
 
     const [openMenuMobile, setOpenMenuMobile] = useState(false);
 
