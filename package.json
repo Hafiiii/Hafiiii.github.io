@@ -6,9 +6,12 @@
   "homepage": "http://Hafiiii.github.io/Hafiiii.github.io",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
@@ -42,7 +45,8 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
-    "vite": "^5.2.11"
+    "vite": "^5.2.11",
+    "gh-pages": "^3.1.0"
   },
   "description": "HAFIZAH website",
   "main": "postcss.config.js",
@@ -50,7 +54,8 @@
     "type": "git",
     "url": "git+https://github.com/Hafiiii/Hafiiii.github.io.git"
   },
-  "author": "hafizah",
-  "license": "MIT",
-  "homepage": "https://hafiiii.github.io/"
+  "author": "Hafiiii",
+  "bugs": {
+    "url": "https://github.com/Hafiiii/Hafiiii.github.io/issues"
+  }
 }
