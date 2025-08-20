@@ -45,7 +45,7 @@ export default function SignatureDishes() {
 
     return (
         <>
-            <TitleButton>@ CREATION</TitleButton>
+            <TitleButton>CREATION</TitleButton>
 
             <Box
                 sx={{

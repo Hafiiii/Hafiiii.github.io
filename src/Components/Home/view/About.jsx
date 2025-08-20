@@ -13,23 +13,38 @@ export default function About() {
 
     return (
         <>
-            <TitleButton>@ ABOUT</TitleButton>
+            <TitleButton>ABOUT</TitleButton>
 
             <Stack direction={{ xs: "column", md: "row" }} spacing={12} alignItems="center">
                 <Stack direction="column" spacing={3}>
-                    <Typography variant="body2" textAlign="justify">A software engineering student based in Sarawak, Malaysia. Currently pursuing Bachelor of Computer Science (Software Engineering) in Universiti Malaysia Sarawak (UNIMAS), enthusiastic about the ever-evolving world of technology.</Typography>
+                    <Typography variant="body2" textAlign="justify">
+                        A junior software developer based in Sarawak, Malaysia, recently graduated with a Bachelor of Software Engineering from Universiti Malaysia Sarawak (UNIMAS). Seeking opportunities to contribute to innovative projects and grow as a professional in the software industry.
+                    </Typography>
 
                     <Stack spacing={1}>
-                        <Typography variant="body2">Some technologies I've been engaged with recently</Typography>
-                        <ListText>JavaScript</ListText>
-                        <ListText>React.js</ListText>
-                        <ListText>C/C++</ListText>
+                        <Typography variant="body2">Some technologies I have been working with recently</Typography>
+                        <Stack
+                            spacing={1}
+                            display="grid"
+                            gridTemplateColumns={{
+                                xs: 'repeat(auto, 1fr)',
+                                sm: 'repeat(auto, 1fr)',
+                                md: 'repeat(3, 1fr)',
+                            }}
+                        >
+                            <ListText>JavaScript</ListText>
+                            <ListText>React.js</ListText>
+                            <ListText>Angular</ListText>
+                            <ListText>TypeScript</ListText>
+                            <ListText>React Native</ListText>
+                            <ListText>Java</ListText>
+                            <ListText>Node.js</ListText>
+                        </Stack>
                     </Stack>
 
                     <Typography variant="body2" textAlign="justify">
-                        Embarking on my software engineering journey from scratch,
-                        inspired by a deep curiosity to create impactful things.
-                        Currently focused on front-end development, with an openness to exploring other exciting fields too.
+                        I have hands-on experience in front-end development and a strong foundation in software engineering principles.
+                        Passionate about building impactful solutions and collaborating with teams to deliver high-quality applications.
                     </Typography>
                 </Stack>
 

@@ -8,7 +8,7 @@ import { educationData } from '../components/contentData';
 export default function Education() {
     return (
         <>
-            <TitleButton>@ EDUCATION</TitleButton>
+            <TitleButton>EDUCATION</TitleButton>
 
             <Box
                 rowGap={2}

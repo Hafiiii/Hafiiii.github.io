@@ -34,6 +34,7 @@ export default function CreationGrid() {
                 <Tab label="All" value="All" />
                 <Tab label="Web" value="Web" />
                 <Tab label="Java" value="Java" />
+                <Tab label="Mobile" value="Mobile" />
             </Tabs>
 
             <Box
@@ -65,7 +66,7 @@ export default function CreationGrid() {
                         <Stack direction="column" alignItems="center" justifyContent="center" spacing={1}>
                             <Typography variant="subtitle2">{data.title}</Typography>
                             <Typography variant="caption" color="text.secondary">{data.desc}</Typography>
-                            <Typography variant="caption">{data.team}</Typography>
+                            {data.team &&<Typography variant="caption">Team: {data.team}</Typography>}
                         </Stack>
 
                         <Stack direction="column" alignItems="center" justifyContent="center" spacing={1}>

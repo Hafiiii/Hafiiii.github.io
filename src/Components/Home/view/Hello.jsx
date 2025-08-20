@@ -42,14 +42,14 @@ export default function Hello() {
         <>
             <Stack direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 4, md: 10 }} height="100vh">
                 <Stack direction="column" alignItems="center" justifyContent="center" spacing={{ xs: 1, md: 0 }}>
-                    <Typography variant='body2' lineHeight={0} fontSize={{ xs: 18, md: 28 }} letterSpacing={{ xs: 2, md: 7 }}>Hey, I'm</Typography>
+                    <Typography variant='body2' lineHeight={0} fontSize={{ xs: 18, md: 28 }} letterSpacing={{ xs: 2, md: 7 }}>Hi, I am</Typography>
 
                     <HafizahContainer>
                         <Typography variant="h1" fontSize={{ xs: 60, sm: 80, md: 100, lg: 150 }} letterSpacing={{ xs: 6, sm: 15, md: 30, lg: 50 }}>HAFIZAH</Typography>
                         <Typography variant="h1" fontSize={{ xs: 60, sm: 80, md: 100, lg: 150 }} letterSpacing={{ xs: 6, sm: 15, md: 30, lg: 50 }} className="hafizah__filled">HAFIZAH</Typography>
                     </HafizahContainer>
 
-                    <Typography variant='body2' lineHeight={0} fontSize={{ xs: 18, md: 28 }} letterSpacing={{ xs: 2, md: 7 }}>software engineering student</Typography>
+                    <Typography variant='body2' lineHeight={0} fontSize={{ xs: 18, md: 28 }} letterSpacing={{ xs: 2, md: 7 }}>software engineer</Typography>
                 </Stack>
 
                 <Image
