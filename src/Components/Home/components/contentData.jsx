@@ -17,7 +17,7 @@ export const educationData = [
         course: 'Bachelor of Software Engineering',
         grade: 'CGPA : 3.57',
         start: 'Oct 2021',
-        end: 'Graduation: Nov 2025',
+        end: 'The Graduation: Nov 2025',
     },
     {
         id: 2,

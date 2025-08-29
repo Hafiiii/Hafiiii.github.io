@@ -41,11 +41,6 @@ export default function About() {
                             <ListText>Node.js</ListText>
                         </Stack>
                     </Stack>
-
-                    <Typography variant="body2" textAlign="justify">
-                        I have hands-on experience in front-end development and a strong foundation in software engineering principles.
-                        Passionate about building impactful solutions and collaborating with teams to deliver high-quality applications.
-                    </Typography>
                 </Stack>
 
                 {isMdUp &&
