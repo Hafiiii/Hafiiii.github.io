@@ -47,7 +47,7 @@ export default function Footer() {
                 </Stack>
 
                 <Typography variant="caption">
-                    © Build and Designed by Hafizah.
+                    Build and Designed by Hafizah.
                 </Typography>
 
             </Stack>
