@@ -25,8 +25,8 @@ export const _socials = [
         value: 'email',
         label: 'Email',
         icon: 'carbon:email',
-        URL: 'mailto:hafizah.rmli@gmail.com',
-        shortURL: 'hafizah.rmli@gmail.com',
+        URL: 'mailto:hafizah.rmli.work@gmail.com',
+        shortURL: 'hafizah.rmli.work@gmail.com',
     },
 ];
 
